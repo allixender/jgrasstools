@@ -61,9 +61,13 @@ public class Generator52N {
          *
          * TODO Also problematic mapping with special inputs/outputs. 52N WPS could handle those though :-)
          * - MapCalc, Variogram, VectorTableJoiner
+         *
+         * TODO Also problematic curiously a few ClassField lists provide duplicate parameters?! This is also reflects in *.zcfg
+         * - CurvaturesBivariate, Mapcalc, Ab, Labeler, Morpher, CannyEdgeDetector, RasterConverter, Geomorphon
          */
         List<String> skipModules = Arrays.asList(new String[]{"RasterReader", "RasterWriter", "VectorReader",
-                "VectorWriter", "FileIterator", "GridGeometryReader", "VectorTableJoiner", "Variogram", "MapCalc"});
+                "VectorWriter", "FileIterator", "GridGeometryReader", "VectorTableJoiner", "Variogram", "MapCalc"
+                , "CurvaturesBivariate", "Mapcalc", "Ab", "Labeler", "Morpher", "CannyEdgeDetector", "RasterConverter", "Geomorphon"});
 
         for( String className : allClasses ) {
             Class< ? > clazz = moduleName2Class.get(className);

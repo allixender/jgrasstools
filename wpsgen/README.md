@@ -9,19 +9,28 @@
 
 - call the generator class for your favourite WPS
 
-`java -classpath target/jgt-zoowps-0.7.9-SNAPSHOT-jar-with-dependencies.jar org.jgrasstools.wps.utils.Generator52N`
-`java -classpath target/jgt-zoowps-0.7.9-SNAPSHOT-jar-with-dependencies.jar org.jgrasstools.wps.utils.GeneratorZoo`
+```shell
+java -classpath target/jgt-wpsgen-0.7.9-SNAPSHOT-jar-with-dependencies.jar org.jgrasstools.wps.utils.Generator52N
+
+java -classpath target/jgt-wpsgen-0.7.9-SNAPSHOT-jar-with-dependencies.jar org.jgrasstools.wps.utils.GeneratorZoo
+```
 
 - now the classes have been genrated, you could check them in your IDE
 - zoo config files should be generated under the src/main/resources folder
 - now that the java classes are freshly generated in the build path, compile to see if all java is well
 
 - go back up into main jgrasstools directory
-`cd ..`
-`mvn -Dmaven.test.skip=true compile`
+
+```shell
+cd ..
+mvn -Dmaven.test.skip=true compile
+```
 
 - now package again, to vreate a full uber jar will all classes and all dependencies
-`mvn -Dmaven.test.skip=true package`
+
+```shell
+mvn -Dmaven.test.skip=true package
+```
 
 - this single thing can be dropped into ZOO-Project cgi-bin folder or
 - 52n wps/WEB-INF/lib and the the full canonical algorithm names to wps_config.xml (this step more docu later :-p )
