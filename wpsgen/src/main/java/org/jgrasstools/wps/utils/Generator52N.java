@@ -139,7 +139,6 @@ public class Generator52N {
                 if (fileIndicator != null) {
                     if (fileIndicator.equals(JGTConstants.FILEOUT_UI_HINT) || fileIndicator.equals(JGTConstants.FOLDEROUT_UI_HINT)) {
                         inputOutputIndicator = "output";
-                        fileInOutputs.add(fieldName);
                     } else if (fileIndicator.equals(JGTConstants.FILEIN_UI_HINT) || fileIndicator.equals(JGTConstants.FILESPATHLIST_UI_HINT)) {
                         inputOutputIndicator = "input";
                     }

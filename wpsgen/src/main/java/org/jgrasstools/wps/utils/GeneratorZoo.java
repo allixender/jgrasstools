@@ -41,8 +41,10 @@ public class GeneratorZoo {
     private static final String EMPTY_DOC = " - ";
 
     public static void generate() throws IOException {
-        boolean doInDefaultPackage = true;
+        boolean doInDefaultPackage = false;
         File classesPackageFile = new File("./src/main/java/org/jgrasstools/wps/zoo");
+        // not practical for IDE, I understand implications for ZOO :-)
+
         if (doInDefaultPackage) {
             classesPackageFile = new File("./src/main/java");
         }
