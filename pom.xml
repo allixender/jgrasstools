@@ -25,6 +25,7 @@
         <module>lesto</module>
         <module>grass</module>
     <module>modules</module>
+    <module>wpsgen</module>
   </modules>
 
 	<issueManagement>

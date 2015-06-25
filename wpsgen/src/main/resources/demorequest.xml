@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wps:Execute service="WPS" version="1.0.0"
+             xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1"
+             xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsExecute_request.xsd">
+
+    <ows:Identifier>org.jgrasstools.wps.n52.RasterReprojectorAlgorithm</ows:Identifier>
+
+    <!--
+    pNorth 5110870.0
+               outRaster /home/akmoch/dev/zoo-data/dtm.tiff
+               pInterpolation NEAREST_NEIGHTBOUR
+               inRaster /home/akmoch/dev/zoo-data/dtm.asc
+               pSouth 5110830.0
+               pEast 1637190.0
+               pRows 4
+               pCode EPSG:3003
+               pCols 5
+               pWest 1637140.0
+
+    -->
+
+    <wps:DataInputs>
+        <wps:Input>
+            <ows:Identifier>pCols</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData dataType="xs:int">5</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>pCode</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData dataType="xs:string">EPSG:3003</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>pWest</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData dataType="xs:double">1637140.0</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>pNorth</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData dataType="xs:double">5110870.0</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>outRaster</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData dataType="xs:string">/home/akmoch/dev/zoo-data/dtm.tiff</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>pInterpolation</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData dataType="xs:string">NEAREST_NEIGHTBOUR</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>inRaster</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData dataType="xs:string">/home/akmoch/dev/zoo-data/dtm.asc</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>pSouth</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData dataType="xs:double">5110830.0</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>pEast</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData dataType="xs:double">1637190.0</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+        <wps:Input>
+            <ows:Identifier>pRows</ows:Identifier>
+            <wps:Data>
+                <wps:LiteralData dataType="xs:int">4</wps:LiteralData>
+            </wps:Data>
+        </wps:Input>
+
+    </wps:DataInputs>
+
+
+    <wps:ResponseForm>
+        <wps:RawDataOutput mimeType="text/plain">
+            <ows:Identifier>resOutRaster</ows:Identifier>
+        </wps:RawDataOutput>
+    </wps:ResponseForm>
+
+</wps:Execute>
+        ​

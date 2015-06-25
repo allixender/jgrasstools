@@ -1,0 +1,16 @@
+mvn -Dmaven.test.skip=true clean package
+
+cd zoowps
+
+java -classpath target/jgt-zoowps-0.7.9-SNAPSHOT-jar-with-dependencies.jar org.jgrasstools.wps.utils.Generator52N
+java -classpath target/jgt-zoowps-0.7.9-SNAPSHOT-jar-with-dependencies.jar org.jgrasstools.wps.utils.GeneratorZoo
+
+// compile to see if all java is well
+mvn -Dmaven.test.skip=true compile
+mvn -Dmaven.test.skip=true package
+
+http://localhost:8080/wps/WebProcessingService?service=WPS&version=1.0.0&request=execute&identifier=org.jgrasstools.wps.n52.RasterReprojectorAlgorithm&DataInputs=inRaster=/home/akmoch/dev/zoo-data/dtm.asc;pCode=EPSG:3003;pInterpolation=NEAREST_NEIGHTBOUR;outRaster=/home/akmoch/dev/zoo-data/dtm.out;pNorth=5110870.0;pSouth=5110830.0;pWest=1637140.0;pEast=1637190.0;pRows=4;pCols=5
+
+ DEBUG org.n52.wps.server.WebProcessingService: org.n52.wps.server.ExceptionReport: Data Identifier not supported: outRaster
+
+
